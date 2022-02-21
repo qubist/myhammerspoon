@@ -19,7 +19,7 @@ end
 f19 = hs.hotkey.bind({}, 'f19', enterHyperMode, exitHyperMode)
 
 -- Press `hyper+shift+R` to reload Hammerspoon configuration.
-hyper:bind({'shift'}, 'r', nil, function()
+hyper:bind({'shift'}, 'r', function()
     hs.reload()
 end)
 

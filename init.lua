@@ -2,6 +2,7 @@ require 'windows'
 require 'spaces'
 require 'hyper'
 require 'apps'
+require 'typing'
 
 -- Reload configuration file every time it changes
 function reloadConfig(files)
@@ -17,8 +18,6 @@ function reloadConfig(files)
 end
 myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 
-hyper:bind({}, 'r', nil, function()
-  hs.reload()
-end)
+hyper:bind({'shift'}, 'r', function() hs.reload() end)
 
 hs.alert.show("Config loaded")

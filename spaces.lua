@@ -9,5 +9,5 @@ function moveToSpace(num)
 end
 
 for i, keycode in pairs({'left','down','right'}) do
-    hyper:bind({}, keycode, nil, moveToSpace(i))
+    hyper:bind({}, keycode, moveToSpace(i))
 end

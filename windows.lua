@@ -1,7 +1,7 @@
 hyper = require 'hyper'
 
 -- Tile windows Rectangle-style
-hyper:bind({}, 'h', nil, function()
+hyper:bind({}, 'h', function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
@@ -14,7 +14,7 @@ hyper:bind({}, 'h', nil, function()
 end)
 
 for _, keycode in pairs({'n','l'}) do
-    hyper:bind({}, keycode, nil, function()
+    hyper:bind({}, keycode, function()
         local win = hs.window.focusedWindow()
         local f = hs.window.focusedWindow():frame()
         local screen = win:screen()
@@ -26,7 +26,7 @@ for _, keycode in pairs({'n','l'}) do
         win:setFrame(f)
     end)
 end
-hyper:bind({}, 'c', nil, function()
+hyper:bind({}, 'c', function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
@@ -37,7 +37,7 @@ hyper:bind({}, 'c', nil, function()
     f.y = max.y
     win:setFrame(f)
 end)
-hyper:bind({}, 't', nil, function()
+hyper:bind({}, 't', function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
@@ -48,7 +48,7 @@ hyper:bind({}, 't', nil, function()
     f.y = max.y + f.h
     win:setFrame(f)
 end)
-hyper:bind({}, 'return', nil, function()
+hyper:bind({}, 'return', function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
