@@ -3,6 +3,9 @@ require 'hyper'
 function launch(appname)
     return function()
         hs.application.launchOrFocus(appname)
+        if appname == 'Finder' then
+            hs.appfinder.appFromName(appname):activate()
+        end
     end
 end
 
