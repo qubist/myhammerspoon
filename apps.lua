@@ -18,6 +18,7 @@ quickapps = {
   {'d', 'Discord'},
   {'z', 'zoom.us'},
   {'v', 'Visual Studio Code'},
+  {'m', 'Messages'},
 }
 
 for _, app in pairs(quickapps) do

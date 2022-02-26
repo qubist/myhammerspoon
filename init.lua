@@ -3,6 +3,7 @@ require 'spaces'
 require 'hyper'
 require 'apps'
 require 'typing'
+require 'caffeine'
 
 -- Reload configuration file every time it changes
 function reloadConfig(files)
